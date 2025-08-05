@@ -32,7 +32,7 @@ operatorBtn.forEach((btn) => {
                 operator = "";
                 return;
             }
-            const result = operate(Number(num1), Number(num2), operator);
+            const result = operate(parseFloat(num1), parseFloat(num2), operator);
             display.textContent = result;
             num1 = String(result);
             num2 = "";
@@ -65,7 +65,7 @@ function multiply(num1, num2) {
 }
 
 function divide(num1, num2) {
-    return num1 / num2;
+    return Math.round((num1 / num2) * 100) / 100;
 }
 
 function operate(num1, num2, operator) {
@@ -77,7 +77,7 @@ function operate(num1, num2, operator) {
         case '*':
             return multiply(num1, num2);
         case '/':
-            return divide(num1, num2);
+            return  divide(num1, num2);
         default:
             break;
     }
