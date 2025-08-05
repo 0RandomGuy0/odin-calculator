@@ -1,8 +1,15 @@
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     min-height: 100vh;
     margin: 0;
+    background-color: bisque;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
 }
 
 .calculatorContainer{
@@ -11,6 +18,9 @@ body{
     justify-content: center;
     align-items: center;
     gap: 5px;
+    background-color: black;
+    height: fit-content;
+    align-self: center;
 }
 
 .display{
@@ -19,11 +29,12 @@ body{
     height: 50px;
     width: 200px;
     font-size: 50px;
+    color: aliceblue;
 }
 
 .digitOperators{
     display: flex;
-    height: 40vh;
+    height: 250px;
 }
 
 .digits{
