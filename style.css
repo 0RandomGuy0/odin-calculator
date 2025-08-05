@@ -1,0 +1,58 @@
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.calculatorContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.display{
+    display: flex;
+    justify-content: end;
+    height: 50px;
+    width: 200px;
+    font-size: 50px;
+}
+
+.digitOperators{
+    display: flex;
+    height: 40vh;
+}
+
+.digits{
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    width: 150px;
+}
+
+.operators{
+    display: flex;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 50px;
+}
+
+.digits button{
+    background-color: darkgray;
+}
+
+.operators button{
+    background-color: orange;
+}
+
+button{
+    height: 50px;
+    width: 50px;
+    border-color: black;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+}
