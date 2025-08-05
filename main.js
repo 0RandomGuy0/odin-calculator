@@ -32,6 +32,12 @@ operatorBtn.forEach((btn) => {
                 operator = "";
                 return;
             }
+            if (event.target.textContent === "=") {
+                const result = operate(parseFloat(num1), parseFloat(num2), operator);
+                display.textContent = result;
+                resetCalculator();
+                return;
+            }
             const result = operate(parseFloat(num1), parseFloat(num2), operator);
             display.textContent = result;
             num1 = String(result);
@@ -46,9 +52,7 @@ operatorBtn.forEach((btn) => {
 });
 
 clearBtn.addEventListener("click", () => {
-    num1 = "";
-    num2 = "";
-    operator = "";
+    resetCalculator();
     display.textContent = "000";
 });
 
@@ -81,4 +85,10 @@ function operate(num1, num2, operator) {
         default:
             break;
     }
+}
+
+function resetCalculator() {
+    num1 = "";
+    num2 = "";
+    operator = "";
 }
